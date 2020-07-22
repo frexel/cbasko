@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +10,279 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/estilos">}
+    <link rel="stylesheet" href="css/estilosbasko.css">
 
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/smooth-scroll.min.js"></script>
-    <script src="js/jquery.paroller.js"></script>
+    <script type="text/javascript" src="js/instafeed.min.js"></script>
+    <link rel="stylesheet" href="css/jquerysctipttop.css">
+
 </head>
-<body>
-   <h1>Hola mundo</h1> 
+
+<body onselectstart="return false">
+    <!--script>
+        AOS.init();
+    </script-->
+    <script>
+        $(window).paroller();
+    </script>
+
+    <script type="text/javascript">
+        var feed = new Instafeed({
+            get: 'restaurantcentrobasko',
+            tagName: 'restaurantcentrobasko',
+            clientId: 'YOUR_CLIENT_ID'
+        });
+        feed.run();
+    </script>
+    <nav class="navbar navbar-inverse navbar-expand-sm bg-dark navbar-dark fixed-top baskoNav" role="tablist">
+        <div class="collapse navbar-collapse justify-content-center" id="BotonCollapse">
+            <ul class="nav navbar-nav raleway-medium">
+                <li class="nav-item">
+                    <a easeInOutQuad class="nav-link boton" href="#home">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a linear class="nav-link boton" href="#menu">MENU</a>
+                </li>
+                <li class="nav-item">
+                    <a linear class="nav-link boton" href="#obras">RESERVAR</a>
+                </li>
+                <li class="nav-item">
+                    <a linear class="nav-link boton" href="#quienesSomos">QUIÉNES SOMOS</a>
+                </li>
+                <li class="nav-item">
+                    <a linear class="nav-link boton" href="#contacto">CONTACTO</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--******************************************************************************************************************-->
+
+    <section id="home" class="logoCarrusel">
+        <div class="overlay">
+            <div class="carrusel" data-paroller-factor="-0.2" data-paroller-factor-xs="0.3" data-paroller-type="foreground"
+                data-paroller-direction="vertical">
+                <!--Este div va a tener el efecto paroller-->
+                <div id="carouselExampleIndicators" class="slide carruselQuery" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carrusel1 tamanoCarrusel"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carrusel2 tamanoCarrusel"></div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carrusel3 tamanoCarrusel"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid h-100">
+            <div class="d-flex text-center h-100">
+                <div class="logo-pos my-auto w-100 d-flex align-items-center">
+                    <img class="img-fluid logo" src="img/logo_01.png" alt="Restaurant Centro Basko">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid no-pad">
+        <div class="row no-gutters">
+            <div class="col-12 no-gutters">
+                <div class="separadorParoller no-gutters"></div>
+            </div>
+        </div>
+    </div>
+
+    <!--******************************************************************************************************************-->
+
+    <section id="instaFeed" class="instaFeed" style="height:100vh!important; background-color: white">
+        <div class="container">
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-8 justify-content-center text">
+                    <img src="img/d_escudo.png" class="img-fluid">
+                    <h2 class="text-center introHead" style="color:red;">@RESTAURANTCENTROBASKO</h2>
+                    <p class="text-center introHead" style="color:green;">SEGUINOS EN INSTAGRAM!</p>
+                    <p class="text-center introHead" style="color:red;">-</p>
+                </div>
+                <div class="col-2"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-12 d-block d-sm-none">
+                    <!--Este div debería no aparecer en la vista de escritorio, solo va a tener 2 instagrams-->
+                </div>
+                <div class="col-12 d-none d-sm-block">
+                    <!--Este div debería no aparecer en la vista de movil, va a tener 8 instagrams-->
+                    <div id="instafeed"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--******************************************************************************************************************-->
+
+    <section class="saborAutentico">
+        <div class="fondoSabor" data-paroller-factor="0.5"></div>
+        <div class="container-fluid sabor flex-wrap w-100 no-pad">
+            <div class="w-100">
+                <img src="img/m_autenticosaborbasko_mask01.png" class="w-100 img-fluid">
+            </div>
+
+            <div class="w-100 maxAncho">
+                <h2 class="introHead blanco" style="font-size: 10em;">VOLVIÓ</h2>
+                <p class="introHead blanco w-100"
+                    style="font-size: 3em; text-overflow: ellipsis; white-space: no-wrap;">EL
+                    #AUTENTICOSABORBASKO
+                </p>
+            </div>
+
+            <div class="w-100">
+                <img src="img/m_autenticosaborbasko_mask02.png" class="w-100 no-gutters img-fluid" />
+            </div>
+    </section>
+
+    <!--******************************************************************************************************************-->
+
+    <section id="quienesSomos">
+        <div class="container-fluid quienesSomos no-pad">
+            <div class="maxAncho">
+                <div class="col-6 no-pad">
+                    <h3 class="introHead rojo" style="font-size: 3em;">QUIENES SOMOS</h3>
+                    <div>
+                        <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt iste sequi eum ad
+                            fugiat
+                            nam
+                            repellendus
+                            modi totam omnis autem quod quia ea porro minus, facilis ratione. Consequuntur, neque
+                            autem.</P>
+                        <br>
+                        <span><b>Lorem ipsum dolor sit amet consectetur adipisicing elit.</b></span>
+                    </div>
+                    <button class="btn btn-danger boton-w raleway-light" style="margin:3em 0 4em;"> > LEER MÁS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--******************************************************************************************************************-->
+
+    <section id="menu">
+        <div class="fondoMenu" data-paroller-factor="0.5"></div>
+        <div class="container-fluid menuContainer flex-nowrap w-100 no-pad">
+            <div class="w-100">
+                <img src="img/d_menu_mask01.png" class="w-100 no-gutters img-fluid" />
+            </div>
+            
+            <div class="w-100 maxAncho">
+                <h2 class="introHead blanco" style="font-size: 10em;">MENU</h2>
+                <span class="blanco raleway-semibold">Conocé nuestras especialidades y asombrate con lo que
+                    tenemos para ofrecerte</span><br>
+                <button class="btn btn-danger boton-w raleway-light" style="margin-top:3em;"> > VER MÁS </button>
+            </div>
+            
+            <div class="w-100">
+                <img src="img/d_footercompleto.png" class="w-100 no-gutters img-fluid" />
+            </div>
+        </div>
+    </section>
+
+    <!--******************************************************************************************************************-->
+
+    <section id="contacto">
+        <div class="container-fluid maxAncho" style="padding:4em 0;">
+            <div class="row" style="width: 100%; box-sizing: content-box!important; display: flex; justify-content: space-around;">
+                <div class="col-12 col-md-4 donde no-pad no-gutters">
+                    <h3 class="introHead blanco">DÓNDE</h3>
+                    <p class="raleway-light blanco">Calle 14 n 125 (Esq. 58)</p>
+                </div>
+                <div class="col-12 col-md-4 cuando no-pad no-gutters">
+                    <h3 class="introHead blanco">CÚANDO</h3>
+                    <p class="raleway-light blanco textoCuando">Lunes a Viernes</p>
+                    <p class="raleway-bold blanco textoCuando">10.00hs a 00.00hs</p>
+                    <p class="raleway-light blanco textoCuando">Sábados a Domingos</p>
+                    <p class="raleway-bold blanco textoCuando">10.00hs a 01.00hs</p>
+                </div>
+                <div class="col-12 col-md-4 social no-pad no-gutters">
+                    <h3 class="introHead blanco">SOCIAL MEDIA</h3>
+                    <a href="https://www.facebook.com/RestaurantCentroBasko/"><img src="img/icon_fb.png" alt="Facebook"
+                            class="iconSocial"></a>
+                    <a href="https://api.whatsapp.com/send?phone=5492216764031"><img src="img/icon_wsp.png"
+                            alt="Whatsapp" class="iconSocial"></a>
+                    <a href="https://www.instagram.com/restaurantcentrobasko/"><img src="img/icon_ig.png"
+                            alt="Instagram" class="iconSocial"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <span class="raleway-light blanco textoCuando">2019</span><br>
+                    <span class="raleway-light blanco">DESIGN & BACKEND 'ESTUDIO SLOT'</span>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jquery.paroller.js"></script>
+
+    <script>
+        $(document)
+            .ready(function () {
+                //initialize paroller.js
+                $('[data-paroller-factor]').paroller();
+                //initialize paroller.js and set options for elements with .paroller class
+                $('.paroller-example').paroller({
+                    factorXs: 0.1,
+                    factorSm: 0.1,
+                    factorMd: -0.4,
+                    factorLg: -0.5,
+                    factorXl: -0.6,
+                    factor: -0.4,
+                    type: 'background',
+                    direction: 'horizontal'
+                });
+            });
+    </script>
+    <!--Smooth Scrolling-->
+    <script>
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 2000, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
 </body>
+
 </html>
